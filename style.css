@@ -3,7 +3,7 @@ ul.topnav {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-image: linear-gradient( 135deg, #acacac 10%, #696969 100%);
+	background-image: linear-gradient( 135deg, #414141 10%, #292929 100%);
 	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
 ul.topnav li {
