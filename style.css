@@ -14,7 +14,8 @@ ul.topnav li a {
 	padding: 14px 16px;
 	text-align: center;
 	text-decoration: none;
-	color: white;
+	color: rgb(240, 240, 240);
+  
 }
 ul.topnav li a:hover:not(.active) {
 	background-image: linear-gradient( 135deg, #55a06c 10%, #5e959b 100%);
@@ -38,6 +39,7 @@ ul.topnav li.right {
 body {
   margin: 0;
   background-color: rgb(70, 70, 70);
+  color:white;
   font-family: 'Yomogi', cursive;
 }
 
@@ -111,4 +113,71 @@ body {
 }
 .cp_textlink02:hover::before {
 	transform: scaleY(4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .a01 {
+    content: 'Runa Browser';
+  }
+}
+
+/* Profile用 */
+.cp_table *, .cp_table *:before, .cp_table *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cp_table {
+  border-radius: 10px;
+	width: 30%;
+	border-collapse: collapse;
+	border-right: 1px solid #222222;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+.cp_table thead th {
+	padding: 10px 15px;
+	border-right: 1px solid #1f1f1f;
+	border-bottom: 1px solid #000000;
+	background: #222222;
+}
+.cp_table thead th:last-child {
+	border-right: 1px solid #1a1a1a;
+}
+.cp_table tbody th {
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #000000;
+	background: #222222;
+	white-space: nowrap;
+}
+.cp_table tbody tr:last-child th {
+	border-bottom: 1px solid #141414;
+}
+.cp_table tbody td {
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #222222;
+	border-left: 1px solid #222222;
+	background: #353535;
+}
+@media only screen and (max-width:480px) {
+	.cp_table thead {
+		display: none;
+	}
+	.cp_table tbody th {
+		display: block;
+	}
+	.cp_table tbody td {
+		display: block;
+		padding: 10px 5px;
+	}
+	.cp_table tbody td::before {
+		font-weight: bold;
+		float: left;/*上のth要素が長い場合こちらを解除すると1段落下り見やすくなります*/
+		padding: 0.5em 0;
+		content: attr(label);
+	}
+	.cp_table tbody td p {
+		padding: 0.5em 0 0 1em;
+    margin: 0;
+	}
 }
