@@ -1,4 +1,6 @@
 ErrorDocument 403 /error.html
 ErrorDocument 404 /404.html
 ErrorDocument 500 /error.html
-deny from all
+<Files ~ "^works\.html$">
+  Deny from all
+</Files>
