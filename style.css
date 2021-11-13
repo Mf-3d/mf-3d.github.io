@@ -181,3 +181,10 @@ body {
     margin: 0;
 	}
 }
+
+select {
+	background-color: #858585;
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+	border: 0;
+	border-radius: 2px;
+}

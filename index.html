@@ -6,6 +6,40 @@
         <link rel="icon" href="favicon.ico">
         <title>mf7cliの物置</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $.ajax({
+                    url: 'list.xml',
+                    type: 'GET',
+                    dataType: 'xml',
+                    timeout: 3000,
+                    error: function() {
+                        //alert("error");
+                    },
+                    success: function(xml){
+                        $('#md_selectbox').on('change', function(){
+                            var val = $('#md_selectbox').val();
+                            if(val != "") {
+                                $(xml).find('item[name*= ' + val + ']').each(function() {
+                                    var itemTitle = $(this).find('title').text();
+                                    var itemDescription = $(this).find('description').text();
+                                    var itemDetail = $(this).find('detail').text();
+                                    $("#is_title").text(itemTitle);
+                                    $("#is_description").text(itemDescription);
+                                    $("#is_detail").text(itemDetail);
+                                });
+                            } else {
+                                $("#is_title").text('---');
+                                $("#is_description").text('---');
+                                $("#is_detail").text('---');
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
     </head>
     <body>
         <ul class="topnav">
@@ -51,10 +85,27 @@
                 <br>
                 <h1>mf7cli について</h1><br>
                 <a href="./profile.html" rel="nofollow" class="cp_textlink02">Profile</a>
+                <a href="./readme.html" rel="nofollow" class="cp_textlink02">配布物の規約</a>
                 <br>
                 <br>
             </div>
-            <div class="grid-item2">4</div>
+            <div class="grid-item2">
+                <h1>お知らせ</h1>
+                <div include="form-input-select()">
+                <select id="md_selectbox">
+                    <option hidden value="nameA">クリックしてください</option>
+                    <option value="nameA">お知らせ1</option>
+                    <option value="nameB">商品B</option>
+                    <option value="nameC">商品C</option>
+                    <option value="nameD">商品D</option>
+                    <option value="nameE">商品E</option>
+                </select>
+                <dl>
+                    <dd id="is_title" style="font-size: 1.2em;">---</dd>
+                    <dd id="is_description">---</dd>
+                </dl>
+                </div>
+            </div>
             <div class="grid-item2">5</div>
             <div class="grid-item2">6</div>  
         </div>
