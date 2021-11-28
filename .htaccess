@@ -2,5 +2,5 @@ ErrorDocument 403 /error.html
 ErrorDocument 404 /404.html
 ErrorDocument 500 /error.html
 
-RewirteEngine on
-Redirect permanent /cliibot.html https://clii-mf-3d.vercel.app
+RewriteEngine on
+RewriteRule /cliibot.html https://clii-mf-3d.vercel.app [R=301,L]
