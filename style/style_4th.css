@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(43, 43, 43);
+    font-family: 'Yomogi', cursive;
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(102, 120, 223);
+}
+
+a:hover {
+    color:rgb(60, 0, 201);
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(26, 26, 26);
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+   
+.title {
+    margin-right: auto;
+}
+   
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Animation */
+#animation1_1 {
+    animation: come-down-anim 2s ease-out;
+    animation-fill-mode: forwards;
+    font-size: larger;
+}
+
+@keyframes come-down-anim {
+	0% {
+        opacity: 1;
+        transform: translateY(-100%);
+	}
+    75% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 1;
+    }
+}
+
+
+/* PNGアニメーション */
+.steps{
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;/*1フレーム分の横幅*/
+    height: 250px;/*1フレーム分の縦幅*/
+    background: url("../img/png-animation-1.jpeg") no-repeat;/*背景画像の読み込み*/
+    animation: stepsline 1s steps(4) infinite;
+      /*stepsline→アニメーション名
+      1s→アニメーションをする時間
+      step→（）の中には、1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数+1の値を入れる（例：4コマ+1コマ=5コマ）
+      infinite→無限ループ*/
+}
+  
+@keyframes stepsline {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1000px 0;/*1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数から1コマ分足した横幅（今回は1フレーム100pxで制作しているので全体の400px+100px=500px⇒-500px）を指定。*/
+    }
+  }
