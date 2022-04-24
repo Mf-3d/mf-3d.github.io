@@ -21,7 +21,7 @@ header {
     background-color: rgb(26, 26, 26);
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
 }
    
 .title {
@@ -75,9 +75,9 @@ header {
   
 @keyframes stepsline {
     0% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
     100% {
-      background-position: -1000px 0;/*1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数から1コマ分足した横幅（今回は1フレーム100pxで制作しているので全体の400px+100px=500px⇒-500px）を指定。*/
+        background-position: -1000px 0;/*1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数から1コマ分足した横幅（今回は1フレーム100pxで制作しているので全体の400px+100px=500px⇒-500px）を指定。*/
     }
-  }
+}
