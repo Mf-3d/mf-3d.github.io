@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    font-size: 0.7em;
+    height: 50px;
+    background-color: rgb(28, 29, 28);
+    align-items: center;
+    border-radius: 0px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+}
+
+.dock {
+    background-image: url("../img/TexturesCom_Wood_Planks1_2x2_512_albedo.jpg");
+    border-radius: 5px;
+    padding: 0.1em;
+    width: 100%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+    margin-bottom: 1em;
+}
+
+.content_box {
+    margin: 1em;
+    background-image: url("../img/2.png");
+    border-radius: 5px;
+    padding: 0.1em;
+    width: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+a {
+    color: #bfff9a;
+}
+
+a:hover {
+    color: #82ff39;
+}
