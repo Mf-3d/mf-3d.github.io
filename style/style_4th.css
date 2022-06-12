@@ -1,6 +1,8 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+ody {
     background-color: rgb(43, 43, 43);
-    font-family: 'Yomogi', cursive;
+    font-family: 'DotGothic16', sans-serif;
     color: white;
     text-align: center;
 }
