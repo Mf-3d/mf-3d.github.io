@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { M_PLUS_1p } from "next/font/google";
 import "./globals.css";
-import "@/components/header";
+import "@/components/header"; // これいるか？
 import Header from "@/components/header";
+import Providers from "./providers";
 
 const m_PLUS_1p300 = M_PLUS_1p({ 
   subsets: ["latin"], 
@@ -20,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body>
-        <Header />
-        {children}
-        <footer className="flex justify-center m-10">© 2024 mf7cli</footer>
+    <html lang="ja" suppressHydrationWarning>
+      <body className="text-slate-950 dark:text-slate-50 bg-white dark:bg-neutral-950">
+        <Providers>
+          <Header />
+          {children}
+          <footer className="flex justify-center m-10 border-b-2 border-neutral-100 dark:border-neutral-900">© 2024 mf7cli</footer>
+        </Providers>
       </body>
     </html>
   );

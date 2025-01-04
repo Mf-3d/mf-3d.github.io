@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import LogoLight from './common/logo/logo_light';
+import Logo from './common/logo';
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
-    <header className="">
-      <h1 className="title">mf7cli</h1>
+    <header className="border-b-2 border-neutral-100 dark:border-neutral-900">
+      <h1 className="title"><Logo /></h1>
       <nav className="nav">
       <ul className="menu-group">
         <li className="menu-item"><Link href="#">Shop</Link></li>
