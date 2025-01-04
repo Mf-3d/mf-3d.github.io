@@ -7,11 +7,12 @@ export default function Page() {
         <Maintenance />
       </div>
       <div className="flex justify-center">
-        <h1>メンテナンス中</h1>
+        <h1>404</h1>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center text-center">
         <p>
-          終了までしばらくお待ちください。
+          お探しのページは見つかりませんでした。<br/>
+          ページは存在しないか、削除されたか、移動された可能性があります。
         </p>
       </div>
     </main>
