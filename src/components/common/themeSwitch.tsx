@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { FaMoon, FaSun, FaDisplay } from "react-icons/fa6";
 
 export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,11 +20,11 @@ export const ThemeSwitch = () => {
     <select
       value={theme}
       onChange={(e) => setTheme(e.target.value)}
-      className="border-2 border-black dark:border-white"
+      className="border-2 border-neutral-100 dark:border-neutral-900"
     >
-      <option value="system">System</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
+      <option value="system"><FaDisplay /></option>
+      <option value="dark"><FaMoon /></option>
+      <option value="light"><FaSun /></option>
     </select>
   );
 };
