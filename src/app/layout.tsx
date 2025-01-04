@@ -20,8 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja">
+      <body>
+        <Header />
+        {children}
+        <footer className="flex justify-center m-10">© 2024 mf7cli</footer>
+      </body>
     </html>
   );
 }
