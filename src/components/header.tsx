@@ -7,7 +7,7 @@ const Header = (): JSX.Element => {
       <h1 className="title"><Logo /></h1>
       <nav className="nav">
       <ul className="menu-group">
-        <li className="menu-item"><Link href="#">Shop</Link></li>
+        <li className="menu-item"><Link href="/">Home</Link></li>
         <li className="menu-item"><Link href="#">About</Link></li>
       </ul>
     </nav>
