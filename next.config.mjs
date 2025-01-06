@@ -22,6 +22,23 @@ const nextConfig = {
   images: {
     disableStaticImages: true, // importした画像の型定義設定を無効にする設定
   },
+  async redirects() {
+    return process.env.MAINTENANCE_MODE === "true"
+      ? [
+          {
+            source: "/((?!maintenance$).*$)",
+            destination: "/maintenance",
+            permanent: false,
+          },
+        ]
+      : [
+        {
+          source: "/maintenance",
+          destination: "/",
+          permanent: false,
+        }
+      ];
+  },
 };
 
 export default nextConfig;
