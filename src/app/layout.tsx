@@ -3,6 +3,7 @@ import "./globals.css";
 import "@/components/header"; // これいるか？
 import Header from "@/components/header";
 import Providers from "./providers";
+import { mplus_1p } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "mf7cli's Website",
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja" suppressHydrationWarning className={`${mplus_1p.className}`}>
       <body className="transition-colors duration-500 text-slate-950 dark:text-slate-50 bg-white dark:bg-neutral-950">
         <Providers>
           <Header />
