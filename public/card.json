@@ -1,0 +1,88 @@
+[
+  {
+    "title": "Flune-Browser",
+    "description": "Webブラウザ",
+    "contents": [
+      {
+        "type": "md",
+        "text": "Electronベースの**Webブラウザ**です。"
+      },
+      {
+        "type": "link",
+        "list": [
+          {
+            "title": "Webサイト",
+            "url": "/project/flune-browser"
+          },
+          {
+            "title": "GitHub",
+            "url": "https://github.com/mf-3d/flune-browser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "mf7cli-BBS",
+    "contents": [
+      {
+        "type": "md",
+        "text": "【リニューアル中】\nSNSライクな**掲示板**です。"
+      },
+      {
+        "type": "link",
+        "list": [
+          {
+            "title": "Webサイト",
+            "url": "/bbs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Minor-Browser Migrator",
+    "contents": []
+  },
+  {
+    "title": "About me",
+    "contents": [
+      {
+        "type": "link",
+        "list": [
+          {
+            "title": "YouTube",
+            "url": "https://www.youtube.com/@mf7cli/"
+          },
+          {
+            "title": "GitHub",
+            "url": "https://github.com/mf-3d/"
+          },
+          {
+            "title": "Twitter",
+            "url": "https://twitter.com/hxe96/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "mf7cli`s Minecraft Server",
+    "image": "/images/projects/icon-minecraft-server.png",
+    "contents": [
+      {
+        "type": "md",
+        "text": "mf7cliが運営するMinecraftサーバーです。\n- ホワイトリスト制"
+      },
+      {
+        "type": "link",
+        "list": [
+          {
+            "title": "Webサイト",
+            "url": "/project/minecraft"
+          }
+        ]
+      }
+    ]
+  }
+]
