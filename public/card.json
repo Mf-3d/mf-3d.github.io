@@ -1,6 +1,7 @@
 [
   {
     "title": "Flune-Browser",
+    "image": "/images/projects/icon-flune-browser.png",
     "description": "Webブラウザ",
     "contents": [
       {
@@ -24,6 +25,7 @@
   },
   {
     "title": "mf7cli-BBS",
+    "image": "/images/projects/icon-mf7cli-bbs.png",
     "contents": [
       {
         "type": "md",
@@ -67,7 +69,7 @@
     ]
   },
   {
-    "title": "mf7cli`s Minecraft Server",
+    "title": "mf7cli's Minecraft Server",
     "image": "/images/projects/icon-minecraft-server.png",
     "contents": [
       {
