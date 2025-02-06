@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { LuHouse } from "react-icons/lu";
 
 import Logo from './common/logo';
-import { ThemeSwitch } from './common/themeSwitch';
+import { ThemeSwitch } from './common/theme-switch';
 import { Tooltip } from './common/Tooltip';
 
 const Header = (): JSX.Element => {
