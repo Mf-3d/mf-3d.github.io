@@ -22,9 +22,9 @@ export default function Page() {
       <h1>🗂️ Works</h1>
       <div className="flex justify-center">
         <Marquee pauseOnHover={true} speed={60} gradient={true} gradientColor={resolvedTheme === "light" ? "white" : "rgb(10,10,10)"} className="flex">
-          {cards.map((card: Card) => {
+          {cards.map((card: Card, index) => {
             return (
-              <div className="card rounded-lg">
+              <div key={index} className="card rounded-lg">
                 <div className="card__imgframe rounded-tl-lg rounded-tr-lg" style={{ backgroundImage: (card.image ? `url(${card.image})` : "") }}></div>
                 <div className="card__textbox rounded-bl-lg rounded-br-lg">
                   <div className="card__titletext truncate">
