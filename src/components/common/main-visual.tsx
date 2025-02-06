@@ -19,7 +19,7 @@ const MainVisual = (): JSX.Element => {
       <div className="flex justify-center mb-9">
         <div className="text-center border-2 border-slate-300 dark:border-slate-800 card-window bg-slate-50 dark:bg-slate-900" style={{
           width: "350px",
-          height: "320px"
+          height: "auto"
         }}>
           <div className="card-window__titlebar bg-slate-200 dark:bg-slate-800">
             <div className="buttons">
@@ -29,17 +29,18 @@ const MainVisual = (): JSX.Element => {
             </div>
           </div>
           <div className="text-center p-9">
-            <img className="profile-icon m-auto mb-3" src="/images/profile/icon.jpg" alt="Profile icon" width={150} height={150}/>
-            <h2 className="text-center">Hello, mf7cli!</h2>
+            <img className="profile-icon m-auto mb-3 w-auto" src="/images/profile/icon.jpg" alt="Profile icon" width={150} height={150}/>
+            <h2 className="text-center !m-0">Hello, mf7cli!</h2>
+              
+            <ul className="nav-social">
+              <li>
+                <Link href={ytUrl ? ytUrl : "#"}><LuYoutube/></Link>
+              </li>
+              <li>
+                <Link href={twitterUrl ? twitterUrl : "#"}><LuTwitter/></Link>
+              </li>
+            </ul>
           </div>
-          <ul className="nav-social">
-            <li>
-              <Link href={ytUrl ? ytUrl : "#"}><LuYoutube/></Link>
-            </li>
-            <li>
-              <Link href={twitterUrl ? twitterUrl : "#"}><LuTwitter/></Link>
-            </li>
-          </ul>
         </div>
       </div>
       <p className="text-center text-xs !text-neutral-50 opacity-50">

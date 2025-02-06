@@ -97,10 +97,16 @@ main>h1 {
   @apply text-center border-b-2 border-slate-100 dark:border-slate-900;
 }
 
+.header__menu__group {
+  min-width: 100px;
+}
 .header__menu__item {
   list-style: none;
   display: inline-block;
   padding: 10px;
+}
+.header__logo>* {
+  min-width: 100px;
 }
 
 
