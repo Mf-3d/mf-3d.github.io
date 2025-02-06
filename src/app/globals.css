@@ -68,6 +68,7 @@ h2,
 h3,
 h4 {
   margin: 0.1rem 0;
+  @apply font-black;
 }
 
 h1 {
@@ -127,4 +128,50 @@ h4 {
 .card__overviewtext {
   font-size: 12px;
   line-height: 150%;
+}
+
+
+.card-window{
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 0;
+}
+.card-window__titlebar{
+  width: 100%;
+  height: 20px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+}
+.buttons{
+  width: 55px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+.buttons div{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+  background: rgb(203, 213, 225);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+.dark .buttons div{
+  border: 1px solid rgba(51, 65, 85, 0.4);
+  background: rgb(71 85 105);
+}
+
+.profile-icon {
+  @apply rounded-full border-2 border-slate-100 dark:border-slate-900;
+}
+
+.nav-social {
+  @apply flex justify-center;
+}
+.nav-social li {
+  @apply ml-1 mr-1;
 }

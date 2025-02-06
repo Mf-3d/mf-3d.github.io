@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 
 import { Card } from "@/types/card";
 import cards from "../../public/card.json";
+import MainVisual from '@/components/common/main-visual';
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
@@ -17,6 +18,22 @@ export default function Page() {
 
   return (
     <main className="mt-9">
+      <MainVisual/>
+      {/* <div className="flex justify-center mb-9">
+        <div className="card-window bg-slate-50 dark:bg-slate-900 border-2" style={{
+          width: "350px",
+          height: "300px"
+        }}>
+          <div className="card-window__titlebar bg-slate-200 dark:bg-slate-800">
+            <div className="buttons">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <h1 className="text-center border-b-2 border-slate-100 dark:border-slate-900">🗂️ Works</h1>
       <div className="flex justify-center">
         <Marquee pauseOnHover={true} speed={60} gradient={true} gradientColor={resolvedTheme === "light" ? "white" : "rgb(10,10,10)"} className="flex">
           {cards.map((card: Card) => {
