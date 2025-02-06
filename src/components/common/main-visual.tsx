@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { LuTwitter, LuYoutube } from "react-icons/lu";
+import { LuTwitter, LuYoutube, LuGithub } from "react-icons/lu";
 
 import cards from "../../../public/card.json";
 
@@ -10,6 +10,7 @@ const profile = cards.find(item => item.title === "About me");
 const links = profile?.contents.find(item => item.type === "link")?.list;
 const twitterUrl = links?.find(item => item.title === "Twitter")?.url;
 const ytUrl = links?.find(item => item.title === "YouTube")?.url;
+const ghUrl = links?.find(item => item.title === "GitHub")?.url;
 
 const MainVisual = (): JSX.Element => {
   return (
@@ -38,6 +39,9 @@ const MainVisual = (): JSX.Element => {
               </li>
               <li>
                 <Link href={twitterUrl ? twitterUrl : "#"}><LuTwitter/></Link>
+              </li>
+              <li>
+                <Link href={ghUrl ? ghUrl : "#"}><LuGithub/></Link>
               </li>
             </ul>
           </div>
