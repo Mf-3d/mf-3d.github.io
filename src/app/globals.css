@@ -152,14 +152,14 @@ main>h1 {
   display: flex;
   align-items: center;
 }
-.buttons{
+.card-window .buttons{
   width: 55px;
   height: 20px;
   display: flex;
   align-items: center;
   margin: 0 5px;
 }
-.buttons div{
+.card-window .buttons div{
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -168,7 +168,7 @@ main>h1 {
   background: rgb(203, 213, 225);
   border: 1px solid rgba(148, 163, 184, 0.4);
 }
-.dark .buttons div{
+.dark .card-window .buttons div{
   border: 1px solid rgba(51, 65, 85, 0.4);
   background: rgb(71 85 105);
 }
