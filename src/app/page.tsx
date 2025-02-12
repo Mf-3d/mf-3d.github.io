@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 
 import { Card } from "@/types/card";
 import cards from "../../public/card.json";
-import MainVisual from '@/components/common/main-visual';
+import MainVisual from "@/components/common/main-visual";
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
