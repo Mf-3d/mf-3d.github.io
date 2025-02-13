@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Marquee from "react-fast-marquee";
 import Modal from "react-modal";
+import ReactMarkdown from "react-markdown";
+
 
 import { Card } from "@/types/card";
 import cards from "../../public/card.json";
 import MainVisual from "@/components/common/main-visual";
-import { LuX } from "react-icons/lu";
+import { LuGithub, LuTwitter, LuX, LuYoutube } from "react-icons/lu";
+import Link from "next/link";
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
@@ -25,17 +28,15 @@ export default function Page() {
     } as Card
   );
 
-  Modal.setAppElement("div");
-
   return (
     <main className="mt-9">
       <MainVisual />
       <h1>🗂️ Works</h1>
       <div className="flex justify-center">
-        <Marquee pauseOnHover={true} speed={60} gradient={true} gradientColor={resolvedTheme === "light" ? "white" : "rgb(10,10,10)"} className="flex">
+        <Marquee speed={60} gradient={true} gradientColor={resolvedTheme === "light" ? "white" : "rgb(10,10,10)"} className="flex">
           {cards.map((card: Card, index) => {
             return (
-              <div key={index} className="card rounded-lg" onClick={() => {
+              <div key={index} className="card rounded-lg cursor-pointer" onClick={() => {
                 setCardInfo(card);
                 setIsOpen(true);
               }}>
@@ -55,25 +56,90 @@ export default function Page() {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setIsOpen(false)}
+          closeTimeoutMS={300}
           style={{
             overlay: {
               zIndex: 100,
-              backgroundColor: "#000a"
+              backgroundColor: "#000a",
+              transition: 'opacity .3s ease-in-out',
             },
             content: {
-              width: "50%",
+              width: "30%",
+              minHeight: "40%",
+              height: "max-content",
               position: "absolute",
-              top: "5rem",
-              left: "25%",
-              right: "25%",
-              bottom: "25%",
-              padding: "1rem"
+              top: "20%",
+              right: "35%",
+              left: "35%",
+              outline: "none",
             },
           }}
-          className="bg-neutral-100 dark:bg-neutral-900 border-solid border-1 rounded-md border-neutral-300 dark:border-neutral-700"
+          className="text-center border-2 border-slate-300 dark:border-slate-800 card-window bg-slate-50 dark:bg-slate-900"
         >
-          <button onClick={() => setIsOpen(false)}><LuX/></button>
-          <h1>{cardInfo.title}</h1>
+          <div className="card-window__titlebar bg-slate-200 dark:bg-slate-800">
+            <div className="buttons">
+              <div onClick={() => setIsOpen(false)}></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div className="card-window__imgframe" style={{ backgroundImage: (cardInfo.image ? `url(${cardInfo.image})` : "") }}></div>
+          <div className="p-9">
+            <h2 className="p-0">{cardInfo.title}</h2>
+            <hr/>
+            {cardInfo.contents.map((content, index) => {
+              switch (content.type) {
+                case "link":
+                  return (
+                    <p className="text-left p-2">
+                      <h3 className="p-0">Links</h3>
+                      <ul>
+                        {
+                          content.links?.map((link) => {
+                            switch (link.title.toLowerCase()) {
+                              case "youtube":
+                                return (
+                                  <li>
+                                    <Link href={link.url}><LuYoutube className="inline-block mr-1"/>{link.title}</Link>
+                                  </li>
+                                );
+                              case "twitter":
+                                return (
+                                  <li>
+                                    <Link href={link.url}><LuTwitter className="inline-block mr-1"/>{link.title}</Link>
+                                  </li>
+                                );
+                              case "github":
+                                return (
+                                  <li>
+                                    <Link href={link.url}><LuGithub className="inline-block mr-1"/>{link.title}</Link>
+                                  </li>
+                                );
+                            }
+
+                            return (
+                              <li><Link href={link.url}>{link.title}</Link></li>
+                            );
+                          })
+                        }
+                      </ul>
+                    </p>
+                  );
+                case "md":
+                  return (
+                    <p className="markdown text-left p-2 font-medium">
+                      <ReactMarkdown>{content.text}</ReactMarkdown>
+                    </p>
+                  );
+                default:
+                  return (
+                    <p>
+                      <span className="italic text-neutral-500 dark:text-neutral-400">この内容は無効です。</span>
+                    </p>
+                  );
+              }
+            })}
+          </div>
         </Modal>
       </div>
     </main>
