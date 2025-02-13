@@ -26,10 +26,11 @@
   {
     "title": "mf7cli-BBS",
     "image": "/images/projects/icon-mf7cli-bbs.png",
+    "description": "掲示板",
     "contents": [
       {
         "type": "md",
-        "text": "【リニューアル中】 <br/> SNSライクな**掲示板**です。"
+        "text": "【リニューアル中】\nSNSライクな**掲示板**です。"
       },
       {
         "type": "link",
@@ -44,6 +45,7 @@
   },
   {
     "title": "Minor-Browser Migrator",
+    "description": "マイナーなブラウザ間の移行ツール",
     "contents": []
   },
   {
@@ -75,7 +77,7 @@
     "contents": [
       {
         "type": "md",
-        "text": "mf7cliが運営するMinecraftサーバーです。 <br/> - ホワイトリスト制"
+        "text": "mf7cliが運営するMinecraftサーバーです。\n\n**ホワイトリスト制**のため参加する際は公式のDiscordサーバーで参加を申請してください。"
       },
       {
         "type": "link",
@@ -83,6 +85,25 @@
           {
             "title": "Webサイト",
             "url": "/project/minecraft"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "thonk-kun",
+    "description": "thinkingによるチャットボット",
+    "contents": [
+      {
+        "type": "md",
+        "text": "thinkingで開発されている**チャットボット**です。"
+      },
+      {
+        "type": "link",
+        "links": [
+          {
+            "title": "Webサイト",
+            "url": "https://thinking-grp.github.io/project/thinkerAI/index.html"
           }
         ]
       }
