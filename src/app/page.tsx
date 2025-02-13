@@ -5,13 +5,13 @@ import { useTheme } from "next-themes";
 import Marquee from "react-fast-marquee";
 import Modal from "react-modal";
 import ReactMarkdown from "react-markdown";
+import { LuGithub, LuTwitter, LuX, LuYoutube } from "react-icons/lu";
+import Link from "next/link";
 
 
 import { Card } from "@/types/card";
 import cards from "../../public/card.json";
 import MainVisual from "@/components/common/main-visual";
-import { LuGithub, LuTwitter, LuX, LuYoutube } from "react-icons/lu";
-import Link from "next/link";
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
@@ -101,26 +101,36 @@ export default function Page() {
                               case "youtube":
                                 return (
                                   <li>
-                                    <Link href={link.url}><LuYoutube className="inline-block mr-1"/>{link.title}</Link>
+                                    <Link href={link.url}>
+                                      <LuYoutube className="inline-block mr-1"/>{link.title}
+                                    </Link>
                                   </li>
                                 );
                               case "twitter":
                                 return (
                                   <li>
-                                    <Link href={link.url}><LuTwitter className="inline-block mr-1"/>{link.title}</Link>
+                                    <Link href={link.url}>
+                                      <LuTwitter className="inline-block mr-1"/>{link.title}
+                                    </Link>
                                   </li>
                                 );
                               case "github":
                                 return (
                                   <li>
-                                    <Link href={link.url}><LuGithub className="inline-block mr-1"/>{link.title}</Link>
+                                    <Link href={link.url}>
+                                      <LuGithub className="inline-block mr-1"/>{link.title}
+                                    </Link>
+                                  </li>
+                                );
+                              default:
+                                return (
+                                  <li>
+                                    <Link href={link.url}>
+                                      {link.title}
+                                    </Link>
                                   </li>
                                 );
                             }
-
-                            return (
-                              <li><Link href={link.url}>{link.title}</Link></li>
-                            );
                           })
                         }
                       </ul>
