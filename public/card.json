@@ -10,7 +10,7 @@
       },
       {
         "type": "link",
-        "list": [
+        "links": [
           {
             "title": "Webサイト",
             "url": "/project/flune-browser"
@@ -29,11 +29,11 @@
     "contents": [
       {
         "type": "md",
-        "text": "【リニューアル中】\nSNSライクな**掲示板**です。"
+        "text": "【リニューアル中】 <br/> SNSライクな**掲示板**です。"
       },
       {
         "type": "link",
-        "list": [
+        "links": [
           {
             "title": "Webサイト",
             "url": "/bbs"
@@ -52,7 +52,7 @@
     "contents": [
       {
         "type": "link",
-        "list": [
+        "links": [
           {
             "title": "YouTube",
             "url": "https://www.youtube.com/@mf7cli/"
@@ -75,11 +75,11 @@
     "contents": [
       {
         "type": "md",
-        "text": "mf7cliが運営するMinecraftサーバーです。\n- ホワイトリスト制"
+        "text": "mf7cliが運営するMinecraftサーバーです。 <br/> - ホワイトリスト制"
       },
       {
         "type": "link",
-        "list": [
+        "links": [
           {
             "title": "Webサイト",
             "url": "/project/minecraft"
