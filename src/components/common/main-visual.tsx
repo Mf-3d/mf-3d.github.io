@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { LuTwitter, LuYoutube, LuGithub } from "react-icons/lu";
 
 import cards from "../../../public/card.json";
+import { Tooltip } from "@/components/common/Tooltip";
 
 const profile = cards.find(item => item.title === "About me");
 const links = profile?.contents.find(item => item.type === "link")?.links;
@@ -35,13 +36,25 @@ const MainVisual = (): JSX.Element => {
               
             <ul className="nav-social">
               <li>
-                <Link href={ytUrl ? ytUrl : "#"}><LuYoutube/></Link>
+                <Link href={ytUrl ? ytUrl : "#"}>
+                  <Tooltip tooltipText="YouTube">
+                    <LuYoutube/>
+                  </Tooltip>
+                </Link>
               </li>
               <li>
-                <Link href={twitterUrl ? twitterUrl : "#"}><LuTwitter/></Link>
+                <Link href={twitterUrl ? twitterUrl : "#"}>
+                  <Tooltip tooltipText="Twitter">
+                    <LuTwitter/>
+                  </Tooltip>
+                </Link>
               </li>
               <li>
-                <Link href={ghUrl ? ghUrl : "#"}><LuGithub/></Link>
+                <Link href={ghUrl ? ghUrl : "#"}>
+                  <Tooltip tooltipText="GitHub">
+                    <LuGithub/>
+                  </Tooltip>
+                </Link>
               </li>
             </ul>
           </div>
