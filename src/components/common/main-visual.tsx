@@ -7,7 +7,7 @@ import { LuTwitter, LuYoutube, LuGithub } from "react-icons/lu";
 import cards from "../../../public/card.json";
 
 const profile = cards.find(item => item.title === "About me");
-const links = profile?.contents.find(item => item.type === "link")?.list;
+const links = profile?.contents.find(item => item.type === "link")?.links;
 const twitterUrl = links?.find(item => item.title === "Twitter")?.url;
 const ytUrl = links?.find(item => item.title === "YouTube")?.url;
 const ghUrl = links?.find(item => item.title === "GitHub")?.url;
