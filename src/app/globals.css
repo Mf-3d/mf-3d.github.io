@@ -203,7 +203,7 @@ main>h1 {
 
 .dark .card-window .buttons div {
   border: 1px solid rgba(51, 65, 85, 0.4);
-  background: rgb(71 85 105);
+  @apply bg-slate-600;
 }
 
 .profile-icon {
@@ -219,22 +219,22 @@ main>h1 {
 }
 
 .ReactModal__Overlay {
-  opacity: 0;
+  @apply opacity-0;
 }
 
 .ReactModal__Overlay--after-open {
-  opacity: 1;
+  @apply opacity-100;
 }
 
 .ReactModal__Overlay--before-close {
-  opacity: 0;
+  @apply opacity-0;
 }
 
 .markdown p {
   @apply mb-2;
 }
 .markdown ul {
-  padding: 1em;
+  @apply p-[1.5em];
 }
 .markdown li {
   @apply list-decimal;
