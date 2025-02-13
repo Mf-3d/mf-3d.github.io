@@ -1,8 +1,8 @@
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { LuTwitter, LuYoutube, LuGithub } from "react-icons/lu";
+import { FaYoutube, FaTwitter } from "react-icons/fa";
+import { VscGithubInverted } from "react-icons/vsc";
 
 import cards from "../../../public/card.json";
 import { Tooltip } from "@/components/common/Tooltip";
@@ -38,21 +38,21 @@ const MainVisual = (): JSX.Element => {
               <li>
                 <Link href={ytUrl ? ytUrl : "#"}>
                   <Tooltip tooltipText="YouTube">
-                    <LuYoutube/>
+                    <FaYoutube className="text-red-500"/>
                   </Tooltip>
                 </Link>
               </li>
               <li>
                 <Link href={twitterUrl ? twitterUrl : "#"}>
                   <Tooltip tooltipText="Twitter">
-                    <LuTwitter/>
+                    <FaTwitter className="text-sky-400"/>
                   </Tooltip>
                 </Link>
               </li>
               <li>
                 <Link href={ghUrl ? ghUrl : "#"}>
                   <Tooltip tooltipText="GitHub">
-                    <LuGithub/>
+                    <VscGithubInverted/>
                   </Tooltip>
                 </Link>
               </li>

@@ -5,7 +5,8 @@ import { useTheme } from "next-themes";
 import Marquee from "react-fast-marquee";
 import Modal from "react-modal";
 import ReactMarkdown from "react-markdown";
-import { LuGithub, LuTwitter, LuX, LuYoutube } from "react-icons/lu";
+import { FaYoutube, FaTwitter } from "react-icons/fa";
+import { VscGithubInverted } from "react-icons/vsc";
 import Link from "next/link";
 
 
@@ -93,7 +94,7 @@ export default function Page() {
                 case "link":
                   return (
                     <p className="text-left p-2">
-                      <h3 className="p-0">Links</h3>
+                      <h3 className="p-0">&#x1f517; Links</h3>
                       <ul>
                         {
                           content.links?.map((link) => {
@@ -102,7 +103,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <LuYoutube className="inline-block mr-1"/>{link.title}
+                                      <FaYoutube className="inline-block mr-1 text-red-500"/>{link.title}
                                     </Link>
                                   </li>
                                 );
@@ -110,7 +111,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <LuTwitter className="inline-block mr-1"/>{link.title}
+                                      <FaTwitter className="inline-block mr-1 text-sky-400"/>{link.title}
                                     </Link>
                                   </li>
                                 );
@@ -118,7 +119,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <LuGithub className="inline-block mr-1"/>{link.title}
+                                      <VscGithubInverted className="inline-block mr-1"/>{link.title}
                                     </Link>
                                   </li>
                                 );
