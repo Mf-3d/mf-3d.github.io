@@ -62,15 +62,16 @@ export default function Page() {
               zIndex: 100,
               backgroundColor: "#000a",
               transition: 'opacity .3s ease-in-out',
+              display: "flex",
+              justifyContent: "center"
             },
             content: {
-              width: "30%",
+              minWidth: "40vw",
+              maxWidth: "90vw",
               minHeight: "40%",
               height: "max-content",
               position: "absolute",
               top: "20%",
-              right: "35%",
-              left: "35%",
               outline: "none",
             },
           }}
