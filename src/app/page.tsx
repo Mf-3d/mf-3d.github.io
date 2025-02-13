@@ -66,7 +66,7 @@ export default function Page() {
               justifyContent: "center"
             },
             content: {
-              minWidth: "40vw",
+              minWidth: "35vw",
               maxWidth: "90vw",
               minHeight: "40%",
               height: "max-content",
