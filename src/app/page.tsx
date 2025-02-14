@@ -103,7 +103,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <FaYoutube className="inline-block mr-1 text-red-500"/>{link.title}
+                                      <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}
                                     </Link>
                                   </li>
                                 );
@@ -111,7 +111,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <FaTwitter className="inline-block mr-1 text-sky-400"/>{link.title}
+                                      <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}
                                     </Link>
                                   </li>
                                 );
@@ -119,7 +119,7 @@ export default function Page() {
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      <VscGithubInverted className="inline-block mr-1"/>{link.title}
+                                      <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}
                                     </Link>
                                   </li>
                                 );

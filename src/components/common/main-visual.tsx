@@ -38,21 +38,21 @@ const MainVisual = (): JSX.Element => {
               <li>
                 <Link href={ytUrl ? ytUrl : "#"}>
                   <Tooltip tooltipText="YouTube">
-                    <FaYoutube className="text-red-500"/>
+                    <FaYoutube className="text-[#f00]"/>
                   </Tooltip>
                 </Link>
               </li>
               <li>
                 <Link href={twitterUrl ? twitterUrl : "#"}>
                   <Tooltip tooltipText="Twitter">
-                    <FaTwitter className="text-sky-400"/>
+                    <FaTwitter className="text-[#00acee]"/>
                   </Tooltip>
                 </Link>
               </li>
               <li>
                 <Link href={ghUrl ? ghUrl : "#"}>
                   <Tooltip tooltipText="GitHub">
-                    <VscGithubInverted/>
+                    <VscGithubInverted className="text-[#171515] dark:text-[#e8eaea]"/>
                   </Tooltip>
                 </Link>
               </li>
