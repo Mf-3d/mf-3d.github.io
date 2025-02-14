@@ -13,6 +13,7 @@ import Link from "next/link";
 import { Card } from "@/types/card";
 import cards from "../../public/card.json";
 import MainVisual from "@/components/common/main-visual";
+import { LuExternalLink, LuLink2 } from "react-icons/lu";
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
@@ -123,11 +124,19 @@ export default function Page() {
                                     </Link>
                                   </li>
                                 );
+                              case link.url.toLowerCase().startsWith("http") && link.title.toLowerCase():
+                                return (
+                                  <li>
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                      <LuLink2 className="inline-block mr-1"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
+                                    </a>
+                                  </li>
+                                );
                               default:
                                 return (
                                   <li>
                                     <Link href={link.url}>
-                                      {link.title}
+                                      <LuLink2 className="inline-block mr-1"/>{link.title}
                                     </Link>
                                   </li>
                                 );
