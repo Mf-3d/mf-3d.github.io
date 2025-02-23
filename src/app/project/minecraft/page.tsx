@@ -20,7 +20,7 @@ export default function Page() {
         backgroundImage: `url(${Visuals[random]})`
       }}>
         <div className="m-9 text-center">
-          <h1>mf7cli's Minecraft Server 2024</h1>
+          <h1>mf7cli&apos;s Minecraft Server 2024</h1>
           <p className="block">
             JE: 1.21.4・BE: 1.21.60
           </p>
