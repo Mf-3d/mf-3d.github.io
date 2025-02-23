@@ -28,14 +28,16 @@ export default function Page() {
       </div>
       <div className="flex justify-start h-[25vh] text-slate-100">
         <div className="mx-2 mb-9 p-9 bg-cover bg-center rounded-lg grow" style={{
-          backgroundColor: "#66a832"
+          backgroundColor: "#304024"
         }}>
           <h2>🖼️ Gallery</h2>
+          🚧 準備中...
         </div>
         <div className="mx-2 mb-9 p-9 bg-cover bg-center rounded-lg grow" style={{
-          backgroundColor: "#a85632"
+          backgroundColor: "#262521"
         }}>
           <h2>🗺️ Map</h2>
+          🚧 準備中...
         </div>
       </div>
     </main>
