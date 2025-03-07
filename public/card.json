@@ -46,7 +46,12 @@
   {
     "title": "Minor-Browser Migrator",
     "description": "マイナーなブラウザ間の移行ツール",
-    "contents": []
+    "contents": [
+      {
+        "type": "md",
+        "text": "マイナーなブラウザ間の移行を支援するツールです。"
+      }
+    ]
   },
   {
     "title": "About me",
@@ -77,7 +82,7 @@
     "contents": [
       {
         "type": "md",
-        "text": "mf7cliが運営するMinecraftサーバーです。\n\n**ホワイトリスト制**のため参加する際は公式のDiscordサーバーで参加を申請してください。"
+        "text": "mf7cliが運営するMinecraftサーバーです。\n\n**ホワイトリスト制**のため参加する際はmf7cliのDiscordサーバーで参加を申請してください。"
       },
       {
         "type": "link",
