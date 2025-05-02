@@ -77,9 +77,9 @@ export default function Page() {
               outline: "none",
             },
           }}
-          className="text-center border-2 border-slate-300 dark:border-slate-800 card-window bg-slate-50 dark:bg-slate-900"
+          className="text-center border border-neutral-300 dark:border-neutral-800 card-window bg-neutral-50 dark:bg-neutral-900"
         >
-          <div className="card-window__titlebar bg-slate-200 dark:bg-slate-800">
+          <div className="card-window__titlebar bg-neutral-200 dark:bg-neutral-800">
             <div className="buttons">
               <div onClick={() => setIsOpen(false)}></div>
               <div></div>
