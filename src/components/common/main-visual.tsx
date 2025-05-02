@@ -16,7 +16,7 @@ const ghUrl = links?.find(item => item.title === "GitHub")?.url;
 const MainVisual = (): JSX.Element => {
   return (
     <div className="flex flex-col justify-center mb-9 p-9 bg-cover  rounded-lg" style={{
-      backgroundImage: "url(/images/main-visual.jpg)"
+      backgroundImage: "url(/images/main-visual.webp)"
     }}>
       <div className="flex justify-center mb-9">
         <div className="text-center border-2 border-slate-300 dark:border-slate-800 card-window bg-slate-50 dark:bg-slate-900" style={{
