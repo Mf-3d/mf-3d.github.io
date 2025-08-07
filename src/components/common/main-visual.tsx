@@ -31,7 +31,7 @@ const MainVisual = (): JSX.Element => {
             </div>
           </div>
           <div className="text-center p-9">
-            <img className="profile-icon m-auto mb-3 w-auto" src="/images/profile/icon.jpg" alt="Profile icon" width={150} height={150}/>
+            <img className="profile-icon m-auto mb-3 w-auto" src="/images/profile/icon.png" alt="Profile icon" width={150} height={150}/>
             <h2 className="text-center !m-0">Hello, mf7cli!</h2>
               
             <ul className="nav-social">

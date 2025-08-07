@@ -55,7 +55,7 @@
   },
   {
     "title": "About me",
-    "image": "/images/profile/icon.jpg",
+    "image": "/images/profile/icon.png",
     "contents": [
       {
         "type": "link",
