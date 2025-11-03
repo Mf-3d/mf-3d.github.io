@@ -132,6 +132,7 @@ main>h1 {
   width: 244px;
   height: auto;
   margin: 1em;
+  @apply bg-neutral-500;
 }
 
 .card__imgframe {
