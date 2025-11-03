@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { FaYoutube, FaTwitter } from "react-icons/fa";
 import { VscGithubInverted } from "react-icons/vsc";
 
+import { Card, isLinkContent } from "@/types/card"
 import cards from "../../../public/card.json";
 import { Tooltip } from "@/components/common/Tooltip";
 
-const profile = cards.find(item => item.title === "About me");
-const links = profile?.contents.find(item => item.type === "link")?.links;
+const profile = cards.find(item => item.title === "About me") as Card;
+const links = profile?.contents.find(isLinkContent)?.links;
 const twitterUrl = links?.find(item => item.title === "Twitter")?.url;
 const ytUrl = links?.find(item => item.title === "YouTube")?.url;
 const ghUrl = links?.find(item => item.title === "GitHub")?.url;

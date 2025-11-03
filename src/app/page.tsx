@@ -10,7 +10,7 @@ import { VscGithubInverted } from "react-icons/vsc";
 import Link from "next/link";
 
 
-import { Card } from "@/types/card";
+import { Card, isKnownCardContent } from "@/types/card";
 import cards from "../../public/card.json";
 import MainVisual from "@/components/common/main-visual";
 import { LuExternalLink, LuLink2 } from "react-icons/lu";
@@ -93,72 +93,76 @@ export default function Page() {
             <h2 className="p-0">{cardInfo.title}</h2>
             <hr/>
             {cardInfo.contents.map((content, index) => {
-              switch (content.type) {
-                case "link":
-                  return (
-                    <div className="text-left p-2" key={index}>
-                      <h3 className="p-0">&#x1f517; Links</h3>
-                      <ul>
-                        {
-                          content.links?.map((link, index) => {
-                            switch (link.title.toLowerCase()) {
-                              case "youtube":
-                                return (
-                                  <li key={index}>
-                                    <Link href={link.url}>
-                                      <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}
-                                    </Link>
-                                  </li>
-                                );
-                              case "twitter":
-                                return (
-                                  <li key={index}>
-                                    <Link href={link.url}>
-                                      <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}
-                                    </Link>
-                                  </li>
-                                );
-                              case "github":
-                                return (
-                                  <li key={index}>
-                                    <Link href={link.url}>
-                                      <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}
-                                    </Link>
-                                  </li>
-                                );
-                              case link.url.toLowerCase().startsWith("http") && link.title.toLowerCase():
-                                return (
-                                  <li key={index}>
-                                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                      <LuLink2 className="inline-block mr-1"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
-                                    </a>
-                                  </li>
-                                );
-                              default:
-                                return (
-                                  <li key={index}>
-                                    <Link href={link.url}>
-                                      <LuLink2 className="inline-block mr-1"/>{link.title}
-                                    </Link>
-                                  </li>
-                                );
-                            }
-                          })
-                        }
-                      </ul>
-                    </div>
-                  );
-                case "md":
-                  return (
-                    <ReactMarkdown className="markdown text-left p-2 font-medium" key={index}>{content.text}</ReactMarkdown>
-                  );
-                default:
+              if (isKnownCardContent(content)) {
+                switch (content.type) {
+                  case "link":
+                    return (
+                      <div className="text-left p-2" key={index}>
+                        <h3 className="p-0">&#x1f517; Links</h3>
+                        <ul>
+                          {
+                            content.links?.map((link, index) => {
+                              switch (link.title.toLowerCase()) {
+                                case "youtube":
+                                  return (
+                                    <li key={index}>
+                                      <Link href={link.url}>
+                                        <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}
+                                      </Link>
+                                    </li>
+                                  );
+                                case "twitter":
+                                  return (
+                                    <li key={index}>
+                                      <Link href={link.url}>
+                                        <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}
+                                      </Link>
+                                    </li>
+                                  );
+                                case "github":
+                                  return (
+                                    <li key={index}>
+                                      <Link href={link.url}>
+                                        <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}
+                                      </Link>
+                                    </li>
+                                  );
+                                case link.url.toLowerCase().startsWith("http") && link.title.toLowerCase():
+                                  return (
+                                    <li key={index}>
+                                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                        <LuLink2 className="inline-block mr-1"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
+                                      </a>
+                                    </li>
+                                  );
+                                default:
+                                  return (
+                                    <li key={index}>
+                                      <Link href={link.url}>
+                                        <LuLink2 className="inline-block mr-1"/>{link.title}
+                                      </Link>
+                                    </li>
+                                  );
+                              }
+                            })
+                          }
+                        </ul>
+                      </div>
+                    );
+                  case "md":
+                    return (
+                      <ReactMarkdown className="markdown text-left p-2 font-medium" key={index}>{content.text}</ReactMarkdown>
+                    );
+                  }
+                } else {
+                  console.warn("Unknown content type", content);
+
                   return (
                     <p key={index}>
                       <span className="italic text-neutral-500 dark:text-neutral-400">この内容は無効です。</span>
                     </p>
                   );
-              }
+                }
             })}
           </div>
         </Modal>
