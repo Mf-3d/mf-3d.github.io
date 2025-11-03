@@ -23,6 +23,8 @@ export default function Page() {
   const { resolvedTheme } = useTheme();
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  Modal.setAppElement("main");
+
   const [cardInfo, setCardInfo] = useState(
     {
       title: "(╯•⌓•╰)",
@@ -94,15 +96,15 @@ export default function Page() {
               switch (content.type) {
                 case "link":
                   return (
-                    <p className="text-left p-2">
+                    <div className="text-left p-2" key={index}>
                       <h3 className="p-0">&#x1f517; Links</h3>
                       <ul>
                         {
-                          content.links?.map((link) => {
+                          content.links?.map((link, index) => {
                             switch (link.title.toLowerCase()) {
                               case "youtube":
                                 return (
-                                  <li>
+                                  <li key={index}>
                                     <Link href={link.url}>
                                       <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}
                                     </Link>
@@ -110,7 +112,7 @@ export default function Page() {
                                 );
                               case "twitter":
                                 return (
-                                  <li>
+                                  <li key={index}>
                                     <Link href={link.url}>
                                       <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}
                                     </Link>
@@ -118,7 +120,7 @@ export default function Page() {
                                 );
                               case "github":
                                 return (
-                                  <li>
+                                  <li key={index}>
                                     <Link href={link.url}>
                                       <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}
                                     </Link>
@@ -126,7 +128,7 @@ export default function Page() {
                                 );
                               case link.url.toLowerCase().startsWith("http") && link.title.toLowerCase():
                                 return (
-                                  <li>
+                                  <li key={index}>
                                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                                       <LuLink2 className="inline-block mr-1"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
                                     </a>
@@ -134,7 +136,7 @@ export default function Page() {
                                 );
                               default:
                                 return (
-                                  <li>
+                                  <li key={index}>
                                     <Link href={link.url}>
                                       <LuLink2 className="inline-block mr-1"/>{link.title}
                                     </Link>
@@ -144,17 +146,15 @@ export default function Page() {
                           })
                         }
                       </ul>
-                    </p>
+                    </div>
                   );
                 case "md":
                   return (
-                    <p className="markdown text-left p-2 font-medium">
-                      <ReactMarkdown>{content.text}</ReactMarkdown>
-                    </p>
+                    <ReactMarkdown className="markdown text-left p-2 font-medium" key={index}>{content.text}</ReactMarkdown>
                   );
                 default:
                   return (
-                    <p>
+                    <p key={index}>
                       <span className="italic text-neutral-500 dark:text-neutral-400">この内容は無効です。</span>
                     </p>
                   );
