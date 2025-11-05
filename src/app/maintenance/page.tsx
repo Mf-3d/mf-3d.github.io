@@ -1,4 +1,4 @@
-import Maintenance from "@/components/common/maintenance";
+import Maintenance from "@/components/icon/maintenance";
 
 export default function Page() {
   return (

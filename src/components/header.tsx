@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { LuHouse, LuMenu } from "react-icons/lu";
 
-import Logo from './common/logo';
+import Logo from './icon/logo';
 import { ThemeSwitch } from './common/theme-switch';
 import { Tooltip } from './common/Tooltip';
 
