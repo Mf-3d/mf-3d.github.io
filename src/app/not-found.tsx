@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Maintenance from "@/components/icon/maintenance";
 
 export const metadata: Metadata = {
-  title: "[404]: Not Found | mf7cli's Website"
+  title: "[404] Page not found | mf7cli's Website"
 }
 
 export default function Page() {
