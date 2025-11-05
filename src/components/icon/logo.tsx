@@ -16,8 +16,7 @@ const Logo = () => {
   if (!mounted) return null;
 
   
-
-  if(resolvedTheme === 'dark') {
+  if(resolvedTheme === "dark") {
     return <LogoDark className="w-1/3" />;
   } else return <LogoLight className="w-1/3" />;
 };

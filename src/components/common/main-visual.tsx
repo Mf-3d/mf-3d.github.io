@@ -19,7 +19,7 @@ const MainVisual = (): JSX.Element => {
     <div className="flex flex-col justify-center mb-9 p-9 bg-cover  rounded-lg" style={{
       backgroundImage: "url(/images/main-visual.webp)"
     }}>
-      <div className="flex justify-center mb-9">
+      {/* <div className="flex justify-center mb-9">
         <div className="text-center border border-neutral-300 dark:border-neutral-800 card-window bg-neutral-50 dark:bg-neutral-900" style={{
           width: "350px",
           height: "auto"
@@ -60,7 +60,10 @@ const MainVisual = (): JSX.Element => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
+      <p className="text-center text-xl !text-neutral-50">
+        <h1>👋 Hello, mf7cli!</h1>
+      </p>
       <p className="text-center text-xs !text-neutral-50 opacity-50">
         <a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E7%A0%82%E6%B5%9C-3V8gdLbwDOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@ameenfahmy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ameenfahmy</a>が撮影した写真
       </p>
