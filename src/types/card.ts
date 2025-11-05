@@ -20,12 +20,10 @@ type LinkContent = {
 // type CodeContent  = { type: "code"; lang: string; code: string };
 // -------------------------------------
 
-// 既知の union
 type KnownCardContent = MarkdownContent | LinkContent;
 
-// Unknown は "text" | "link" を **含まない** literal だけ
 type UnknownCardContent = {
-  type: string; // Exclude しない
+  type: string;
   [k: string]: unknown;
 };
 
