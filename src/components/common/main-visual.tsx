@@ -61,9 +61,9 @@ const MainVisual = (): JSX.Element => {
           </div>
         </div>
       </div> */}
-      <p className="text-center text-xl !text-neutral-50">
+      <div className="text-center text-xl !text-neutral-50">
         <h1>👋 Hello, mf7cli!</h1>
-      </p>
+      </div>
       <p className="text-center text-xs !text-neutral-50 opacity-50">
         <a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E7%A0%82%E6%B5%9C-3V8gdLbwDOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@ameenfahmy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ameenfahmy</a>が撮影した写真
       </p>
