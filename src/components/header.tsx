@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { LuHouse, LuMenu } from "react-icons/lu";
+import { LuHouse } from "react-icons/lu";
 
 import Logo from './icon/logo';
 import { ThemeSwitch } from './common/theme-switch';
