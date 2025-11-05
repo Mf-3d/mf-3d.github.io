@@ -63,6 +63,31 @@ const MainVisual = (): JSX.Element => {
       </div> */}
       <div className="text-center text-xl !text-neutral-50">
         <h1>👋 Hello, mf7cli!</h1>
+        <div className="m-4">
+          <ul className="nav-social">
+            <li>
+              <Link href={ytUrl ? ytUrl : "#"}>
+                <Tooltip tooltipText="YouTube">
+                  <FaYoutube className="text-[#f00]"/>
+                </Tooltip>
+              </Link>
+            </li>
+            <li>
+              <Link href={twitterUrl ? twitterUrl : "#"}>
+                <Tooltip tooltipText="Twitter">
+                  <FaTwitter className="text-[#00acee]"/>
+                </Tooltip>
+              </Link>
+            </li>
+            <li>
+              <Link href={ghUrl ? ghUrl : "#"}>
+                <Tooltip tooltipText="GitHub">
+                  <VscGithubInverted className="text-[#171515] dark:text-[#e8eaea]"/>
+                </Tooltip>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <p className="text-center text-xs !text-neutral-50 opacity-50">
         <a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E7%A0%82%E6%B5%9C-3V8gdLbwDOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@ameenfahmy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ameenfahmy</a>が撮影した写真
