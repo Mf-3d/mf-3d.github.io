@@ -38,6 +38,10 @@
           {
             "title": "Webサイト",
             "url": "/bbs"
+          },
+          {
+            "title": "GitHub",
+            "url": "https://github.com/mf-3d/mf7cli-bbs"
           }
         ]
       }
@@ -50,6 +54,15 @@
       {
         "type": "md",
         "text": "マイナーなブラウザ間の移行を支援するツールです。"
+      },
+      {
+        "type": "link",
+        "links": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/Mf-3d/minor-browser-migrator"
+          }
+        ]
       }
     ]
   },
