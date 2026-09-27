@@ -19,7 +19,7 @@ export const ThemeSwitch = () => {
   }
 
   return (
-    <button onClick={() => {
+    <button className="flex relative items-center" onClick={() => {
       // light → dark → system
       theme === "light" ? setTheme("dark") : (theme === "dark" ? setTheme("system") : setTheme("light"))
     }}>
