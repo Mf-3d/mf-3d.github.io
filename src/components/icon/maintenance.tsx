@@ -1,9 +1,9 @@
 "use client";
 
-import SvgLight from "../../../public/images/maintenance_light.svg";
+import { ReactSVG } from "react-svg";
 
 const Maintenance = () => {
-  return <SvgLight />;
+  return <ReactSVG src="/images/maintenance_light.svg" />;
 };
 
 export default Maintenance;
