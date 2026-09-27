@@ -91,11 +91,12 @@
   },
   {
     "title": "mf7cli's Minecraft Server",
+    "description": "mf7cliが運営するMinecraftサーバー",
     "image": "/images/projects/icon-minecraft-server.png",
     "contents": [
       {
         "type": "md",
-        "text": "mf7cliが運営するMinecraftサーバーです。\n\n**ホワイトリスト制**のため参加する際はmf7cliのDiscordサーバーで参加を申請してください。"
+        "text": "mf7cliが運営する非公開のMinecraftサーバーです。"
       },
       {
         "type": "link",
@@ -123,6 +124,26 @@
           {
             "title": "Webサイト",
             "url": "https://thinking-grp.github.io/project/thinkerAI/index.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Cliibot",
+    "image": "/images/projects/icon-cliibot.png",
+    "description": "Discordボット",
+    "contents": [
+      {
+        "type": "md",
+        "text": "mf7cliが運営する非公開のDiscordサーバーで動作するチャットボットです。"
+      },
+      {
+        "type": "link",
+        "links": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/Mf-3d/cliibot"
           }
         ]
       }
