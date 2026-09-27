@@ -1,5 +1,3 @@
-const MAINTENANCE_MODE = false;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -25,7 +23,7 @@ const nextConfig = {
     disableStaticImages: true, // importした画像の型定義設定を無効にする設定
   },
   async redirects() {
-    return MAINTENANCE_MODE === true
+    return process.env.MAINTENANCE_MODE === "true"
       ? [
           {
             source: "/((?!maintenance$).*$)",
