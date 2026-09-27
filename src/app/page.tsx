@@ -107,7 +107,7 @@ export default function Page() {
                                   return (
                                     <li key={index}>
                                       <Link href={link.url}>
-                                        <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}
+                                        <FaYoutube className="inline-block mr-1 text-[#f00]"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
                                       </Link>
                                     </li>
                                   );
@@ -115,7 +115,7 @@ export default function Page() {
                                   return (
                                     <li key={index}>
                                       <Link href={link.url}>
-                                        <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}
+                                        <FaTwitter className="inline-block mr-1 text-[#00acee]"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
                                       </Link>
                                     </li>
                                   );
@@ -123,7 +123,7 @@ export default function Page() {
                                   return (
                                     <li key={index}>
                                       <Link href={link.url}>
-                                        <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}
+                                        <VscGithubInverted className="inline-block mr-1 text-[#171515] dark:text-[#e8eaea]"/>{link.title}<LuExternalLink className="inline-block ml-1"/>
                                       </Link>
                                     </li>
                                   );
