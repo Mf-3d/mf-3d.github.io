@@ -19,23 +19,39 @@ export const ThemeSwitch = () => {
   }
 
   return (
-    <button className="flex relative items-center" onClick={() => {
-      // light → dark → system
-      theme === "light" ? setTheme("dark") : (theme === "dark" ? setTheme("system") : setTheme("light"))
-    }}>
-      {theme === "light" ? 
-        <Tooltip tooltipText="ライトモード">
-          <LuSun className="fill-orange-600 stroke-orange-600" />
-        </Tooltip> : (
-          theme === "dark" ? 
+    theme === "light" ?
+      <Tooltip tooltipText="ライトモード">
+        <button className="flex relative items-center" onClick={() => setTheme("dark")}><LuSun className="fill-orange-600 stroke-orange-600" /></button>
+      </Tooltip> :
+      (
+        theme === "dark" ?
           <Tooltip tooltipText="ダークモード">
-            <LuMoon className="fill-amber-300 stroke-amber-300" />
-          </Tooltip> : 
-          <Tooltip tooltipText="システムに従う">
-            <LuMonitor />
+            <button className="flex relative items-center" onClick={() => setTheme("system")}><LuMoon className="fill-amber-300 stroke-amber-300" /></button>
           </Tooltip>
-        )
-      }
-    </button>
+          :
+          <Tooltip tooltipText="システムに従う">
+            <button className="flex relative items-center" onClick={() => setTheme("light")}><LuMonitor /></button>
+          </Tooltip>
+      )
   );
+  /*
+  <button onClick={() => {
+    // light → dark → system
+    theme === "light" ? setTheme("dark") : (theme === "dark" ? setTheme("system") : setTheme("light"))
+  }}>
+    {theme === "light" ? 
+      <Tooltip tooltipText="ライトモード">
+        <LuSun className="fill-orange-600 stroke-orange-600" />
+      </Tooltip> : (
+        theme === "dark" ? 
+        <Tooltip tooltipText="ダークモード">
+          <LuMoon className="fill-amber-300 stroke-amber-300" />
+        </Tooltip> : 
+        <Tooltip tooltipText="システムに従う">
+          <LuMonitor />
+        </Tooltip>
+      )
+    }
+  </button>
+  */
 };

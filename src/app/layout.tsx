@@ -20,7 +20,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
-          <footer className="flex justify-center m-10 p-5 border-t-2 border-neutral-100 dark:border-neutral-900">© 2024 mf7cli</footer>
+          <footer className="flex justify-center m-10 p-5 border-t-2 border-neutral-100 dark:border-neutral-900">© 2026 mf7cli</footer>
         </Providers>
       </body>
     </html>
